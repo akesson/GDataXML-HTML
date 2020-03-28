@@ -6,12 +6,12 @@ import PackageDescription
 let package = Package(
     name: "GDataXML",
     products: [
-        .library(name: "GDataXML", targets: ["GDataXML"]),
+        .library(name: "GDataXML", type: .static, targets: ["GDataXML"]),
     ],
     targets: [
         .target(name: "GDataXML",
                 path: "Pod/Classes",
-                publicHeadersPath: "Pod/Classes",
+                publicHeadersPath: nil,
                 linkerSettings: [.linkedLibrary("xml2")]
         )
     ]
